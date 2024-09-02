@@ -1,0 +1,61 @@
+// List of grocery items
+const groceryItems = [
+    "milk",
+    "bread",
+    "apples",
+    "bananas",
+    "eggs",
+    "butter",
+    "apples",
+    "orange juice"
+];
+
+// Function to search for an item in the grocery list
+function searchItem(itemToFind) {
+    // Loop through the grocery items
+    for (let i = 0; i < groceryItems.length; i++) {
+        // Check if the current item matches the item we are searching for
+        if (groceryItems[i].toLowerCase() === itemToFind.toLowerCase()) {
+            return `${itemToFind} found in the list.`;
+        }
+    }
+    // If the loop completes without finding the item
+    return `${itemToFind} not found in the list.`;
+}
+
+// Search for "apples"
+const searchResult = searchItem("apples");
+console.log(searchResult);
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+</head>
+<body>
+    <h1>Create Account</h1>
+    <form id="accountForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+        
+        <button type="submit">Create Account</button>
+    </form>
+    
+    <p id="message"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
