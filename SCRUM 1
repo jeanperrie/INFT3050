@@ -1,5 +1,5 @@
-// List of grocery items
-const groceryItems = [
+// Array containing grocery products
+const items = [
     "milk",
     "bread",
     "apples",
@@ -10,22 +10,23 @@ const groceryItems = [
     "orange juice"
 ];
 
-// Search function
-function searchItem(itemToFind) {
-    //loop through list
-    for (let i = 0; i < groceryItems.length; i++) {
-        // check if current item matches search item
-        if (groceryItems[i].toLowerCase() === itemToFind.toLowerCase()) {
-            return `${itemToFind} found in the list.`;
+// Function to locate a specific product in the array
+function findProduct(query) {
+    // Iterate through the product array
+    for (let index = 0; index < items.length; index++) {
+        // Convert current product and query to lowercase for comparison
+        if (items[index].toLowerCase() === query.toLowerCase()) {
+            return `${query} is present in the list.`;
         }
     }
-   // couldn't find item
-    return `${itemToFind} not found in the list.`;
+    // Return message if product is not found
+    return `${query} is not present in the list.`;
 }
 
-// search for "apples"
-const searchResult = searchItem("apples");
-console.log(searchResult);
+// Example usage: search for "apples"
+const result = findProduct("apples");
+console.log(result);
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
